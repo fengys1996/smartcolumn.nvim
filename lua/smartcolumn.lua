@@ -104,7 +104,7 @@ function smartcolumn.setup(user_config)
 
 	local group = vim.api.nvim_create_augroup("SmartColumn", {})
 	vim.api.nvim_create_autocmd(
-		{ "BufEnter", "CursorMoved", "CursorMovedI", "WinScrolled" },
+		{ "InsertEnter", "InsertLeave" },
 		{
 			group = group,
 			callback = update,
